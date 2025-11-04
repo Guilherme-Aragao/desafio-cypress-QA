@@ -1,4 +1,4 @@
-import CadastroPage from '../support/pages/CadastroPage'
+import CadastroPage from '../support/pages/cadastroPage'
 import { faker } from '@faker-js/faker';
 
 
