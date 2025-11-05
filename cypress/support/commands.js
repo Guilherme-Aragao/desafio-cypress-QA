@@ -1,4 +1,3 @@
-import LoginPage from './pages/LoginPage'
 
 Cypress.Commands.add('login', (email, senha) => {
     LoginPage.visitarPagina()
@@ -25,7 +24,6 @@ Cypress.Commands.add('login', (username, password) => {
 })
 
 Cypress.Commands.add('clearCart', () => {
-    // Acessa a página do carrinho
     cy.visit('/carrinho')
 
     // Verifica se existem produtos no carrinho
@@ -44,3 +42,4 @@ Cypress.Commands.add('clearCart', () => {
         }
     })
 })
+

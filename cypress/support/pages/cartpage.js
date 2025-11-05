@@ -4,6 +4,18 @@ class CartPage {
         cy.visit(`/product/${slug}/`)
     }
 
+    selectSize(size) {
+        cy.wait(500)
+        cy.get(`.button-variable-item-${size}`)
+            .click({ force: true })
+    }
+
+    selectColor(color) {
+        cy.wait(500)
+        cy.get(`.button-variable-item-${color}`)
+            .click({ force: true })
+    }
+
     addToCart() {
         cy.get('button.single_add_to_cart_button').click()
     }
