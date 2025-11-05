@@ -1,137 +1,61 @@
-# Desafio de Automação E2E com Cypress e Allure Report
+# 🧪 Desafio de Automação de Testes E2E com Cypress
 
-Este projeto foi desenvolvido como parte de um desafio técnico de **automação de testes end-to-end (E2E)** para um e-commerce fictício.  
-O objetivo é validar funcionalidades essenciais da aplicação, utilizando boas práticas de automação, relatórios de execução e integração contínua (CI/CD).
-
----
-
-## Tecnologias utilizadas
-
-- [Cypress](https://www.cypress.io/) — Framework principal de testes E2E  
-- [Allure Report](https://docs.qameta.io/allure/) — Geração de relatórios interativos e detalhados  
-- [Node.js](https://nodejs.org/) — Ambiente de execução  
-- [GitHub Actions](https://github.com/features/actions) — Execução automática dos testes e publicação do relatório  
-- [GitHub Pages](https://pages.github.com/) — Hospedagem do dashboard do Allure
+Este projeto faz parte de um **desafio técnico de automação de testes end-to-end (E2E)** utilizando o **Cypress**.  
+O objetivo é validar o comportamento de uma funcionalidade essencial do e-commerce [EBAC Store](http://lojaebac.ebaconline.art.br).
 
 ---
 
-## Como configurar o projeto
+## ⚙️ Como instalar as dependências do projeto
 
-### 1. Clonar o repositório
-
-git clone https://github.com/Guilherme-Aragao/desafio-cypress-QA.git
-cd desafio-cypress-QA
+1. **Clonar o repositório**
+   
+   git clone https://github.com/Guilherme-Aragao/desafio-cypress-QA.git
+   cd desafio-cypress-QA
 
 2. Instalar as dependências
 
-Certifique-se de ter o Node.js instalado (versão 18 ou superior).
 npm install
 
-3. Executar os testes localmente
+▶️ Como rodar os testes
 
-Para rodar todos os testes em modo headless (sem abrir o navegador):
+Executar todos os testes em modo headless:
 npx cypress run
 
-Ou para abrir o Cypress Test Runner interativo:
+Executar os testes no modo interativo (GUI):
 npx cypress open
 
-Após a execução, os resultados serão armazenados em:
+
+Após a execução, será criada a pasta:
+
 allure-results/
 
 
-Gerar o Allure Report localmente
+com os resultados dos testes automatizados.
 
-Após rodar os testes, gere e visualize o relatório do Allure:
+Para gerar o relatório Allure:
+
 npx allure generate allure-results --clean -o allure-report
-npx allure open allure-report
-O relatório será aberto no navegador padrão e exibirá os resultados detalhados dos testes.
+npx allure open
 
-Integração Contínua (CI/CD)
+🧩 Cenário Automatizado
+🛒 Funcionalidade: Carrinho de Compras
 
-O projeto possui um workflow automatizado no GitHub Actions que executa:
+Cenários Implementados:
 
-Instalação das dependências
+Adicionar um produto ao carrinho com sucesso
 
-Execução dos testes do Cypress
+Adicionar múltiplos produtos ao carrinho
 
-Geração do relatório Allure
+Remover um produto do carrinho
 
-Publicação automática no GitHub Pages
+Esvaziar o carrinho e validar a mensagem de carrinho vazio
 
-🌍 Acesso ao Dashboard Allure
-
-Os resultados mais recentes podem ser visualizados online em:
-
-👉 Dashboard Allure - Clique aqui
-
-🧩 Cenários de teste automatizados
-🔹 1. Login
-
-Descrição:
-Valida o fluxo de login com credenciais válidas e inválidas.
 Motivo da escolha:
-O login é uma funcionalidade crítica — garantir seu correto funcionamento evita falhas em fluxos subsequentes.
+O fluxo de carrinho de compras foi escolhido por ser uma funcionalidade central e crítica no contexto de um e-commerce,
+impactando diretamente a experiência do usuário e servindo de base para os fluxos de checkout e finalização de compra.
 
-🔹 2. Cadastro de usuário
+📊 Relatório Allure gerado automaticamente via GitHub Actions
+📍 Dashboard disponível em: https://guilherme-aragao.github.io/desafio-cypress-QA
 
-Descrição:
-Valida o preenchimento e envio do formulário de cadastro de novos usuários.
-Motivo da escolha:
-Cadastro é o primeiro ponto de contato com o sistema, sendo essencial que funcione sem falhas.
-
-🔹 3. Carrinho de compras
-
-Descrição:
-Valida a adição e remoção de produtos no carrinho, além da atualização de quantidades.
-Motivo da escolha:
-O carrinho é o coração de um e-commerce — erros nessa etapa impactam diretamente a conversão de vendas.
-
-🔹 4. Página de produtos
-
-Descrição:
-Verifica a exibição correta de informações de produtos, busca e filtros.
-Motivo da escolha:
-Garante a usabilidade e confiabilidade da listagem de produtos, essencial para a jornada do cliente.
-
-
-Estrutura do projeto
-desafio-cypress-QA/
-├── cypress/
-│   ├── e2e/
-│   │   ├── login.cy.js
-│   │   ├── cadastro.cy.js
-│   │   ├── carrinho.cy.js
-│   │   └── produto.cy.js
-│   ├── support/
-│   │   ├── pages/
-│   │   │   ├── LoginPage.js
-│   │   │   ├── CadastroPage.js
-│   │   │   ├── CarrinhoPage.js
-│   │   │   └── ProdutoPage.js
-│   │   └── commands.js
-│   └── fixtures/
-│       └── users.json
-├── allure-results/
-├── allure-report/
-├── .github/workflows/cypress-allure.yml
-├── package.json
-├── cypress.config.js
-└── README.md
-
-✅ Boas práticas aplicadas
-
-Reutilização de código com Page Objects
-
-Relatórios Allure com screenshots e logs
-
-Pipeline automatizada (CI/CD) com GitHub Actions
-
-Evita hardcode e melhora a manutenção
-
-Estrutura limpa e modular
-
-Autor
-Guilherme Aragão
-    QA Engineer | Automação de Testes | Cypress | Allure | CI/CD
-    LinkedIn - linkedin.com/in/guilherme-aragão-silva-367758235
-    guilherme.aragao2001@hotmail.com
+👨‍💻 Autor: Guilherme Aragão
+📦 Projeto público no GitHub: desafio-cypress-QA

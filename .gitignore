@@ -1,0 +1,37 @@
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Allure Reports
+allure-results/
+allure-report/
+allure-history/
+
+# Coverage / Relatórios adicionais
+coverage/
+reports/
+
+# Sistema / Cache / Config local
+.DS_Store
+.env
+*.log
+package-lock.json
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Build temporários
+dist/
+tmp/
+.cache/

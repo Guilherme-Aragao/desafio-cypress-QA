@@ -1,5 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","16781","Should add a multiples product to the cart successfully","","Wed Nov 05 00:22:45 BRT 2025","passed","Wed Nov 05 00:23:02 BRT 2025","","Shopping Cart - EBAC Store","",""
-"","9244","Should display success message when removing a product","","Wed Nov 05 00:23:02 BRT 2025","passed","Wed Nov 05 00:23:11 BRT 2025","","Shopping Cart - EBAC Store","",""
-"","12232","Should empty the entire cart and validate the empty cart message","","Wed Nov 05 00:23:11 BRT 2025","passed","Wed Nov 05 00:23:23 BRT 2025","","Shopping Cart - EBAC Store","",""
-"","10114","Should add a product to the cart successfully","","Wed Nov 05 00:22:35 BRT 2025","passed","Wed Nov 05 00:22:45 BRT 2025","","Shopping Cart - EBAC Store","",""
